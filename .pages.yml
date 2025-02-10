@@ -3,6 +3,6 @@ media: docs/files
 content:
   - name: presentation
     label: Présentation
-    type: ?
+    type: file
     path: docs/_includes
     filename: "presentation.md"
