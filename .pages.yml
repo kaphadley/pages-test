@@ -6,3 +6,5 @@ content:
     type: file
     path: docs/_includes/content
     filename: "presentation.md"
+    fields:
+      - { name: body, label: Body, type: rich-text }
