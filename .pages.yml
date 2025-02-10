@@ -4,7 +4,6 @@ content:
   - name: presentation
     label: Presentation
     type: file
-    path: docs/_includes/content
-    filename: "presentation.md"
+    path: docs/_includes/content/presentation.md
     fields:
       - { name: body, label: Body, type: rich-text }
