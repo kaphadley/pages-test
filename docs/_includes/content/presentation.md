@@ -1,8 +1,3 @@
 ---
-author: Sat Naing
-pubDatetime: 2023-01-30T15:57:52.737Z
 ---
-
-Le Võ repose sur six piliers: force, souplesse, équilibre, rapidité, précision et- pilier central - le mental. Chacun de ces piliers revêt la même importance, ils sont indissociables et doivent s'élever ensemble, le mental étant le gardien du temple en l'absence duquel, pratiquer revient à gesticuler sans but.
-
-Pour plus d'informations sur notre école, ses salles et son histoire passionnante, rendez-vous sur le site officiel de la [Fédération Internationale de Võ-Việt-Nam](http://vo-vietnam.org/) (FIVV).
+The fast and furious pace of Trump 2.0 is causing economists on Wall Street, who spent months modeling the potential effects of Donald Trump’s policies, to start reevaluating their impact on the US economy, with some warning that the risks to growth are front-loaded and any rewards may not be visible until next year at the earliest.
