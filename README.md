@@ -1,9 +1,4 @@
-# vovietnam-geneve.ch
-
-The content of this repository is the property of _Võ-Vietnam Genève_.
-
-If you need help to setup your own website for a FIVV venue, [contact me](https://ntopulos.github.io/).
-
+# vovietnam-test
 
 ## Usage
 
@@ -15,7 +10,7 @@ To add/remove the main notification, (un)comment the corresponding header in `in
 
 Local Jekyll compilation and web server:
 
-    docker-compose up
+    docker compose up
 
 
 ## Production
