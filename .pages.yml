@@ -2,7 +2,7 @@ media: docs/files
 
 content:
   - name: presentation
-    label: Présentation
+    label: Presentation
     type: file
     path: docs/_includes/content
     filename: "presentation.md"
