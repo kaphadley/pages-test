@@ -1,4 +1,6 @@
 ---
+author: Sat Naing
+pubDatetime: 2023-01-30T15:57:52.737Z
 ---
 
 Le Võ repose sur six piliers: force, souplesse, équilibre, rapidité, précision et- pilier central - le mental. Chacun de ces piliers revêt la même importance, ils sont indissociables et doivent s'élever ensemble, le mental étant le gardien du temple en l'absence duquel, pratiquer revient à gesticuler sans but.
