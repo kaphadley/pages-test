@@ -4,5 +4,5 @@ content:
   - name: presentation
     label: Présentation
     type: file
-    path: docs/_includes
+    path: docs/_includes/content
     filename: "presentation.md"
