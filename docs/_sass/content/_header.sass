@@ -1,0 +1,319 @@
+#visual-header
+  background-color: $color-main-red
+  background: linear-gradient(150deg, $color-main-red 0%, $color-main-red 60%, lighten($color-main-red,2%) 60%, lighten($color-main-red,2%) 100%)
+  color: $color-font-header
+  box-sizing: border-box
+
+
+/* Page Header */
+header
+  display: grid
+  color: $color-font-header
+  grid-template-areas: 'logo button' 'nav nav'
+  grid-gap: 1em
+
+  @media (max-width: $bkpt-medium)
+    padding-top: $body-padding !important
+
+  @media (min-width: $bkpt-small)
+    grid-template-columns: auto auto
+
+  @media (min-width: $bkpt-medium)
+    height: $header-height
+    grid-template-areas: 'logo nav'
+
+  & > div:first-child
+    grid-area: logo
+    justify-content: start
+
+  & > div:last-of-type
+    grid-area: button
+    align-items: center
+    justify-content: flex-end
+
+    @media (min-width: $bkpt-medium)
+      display: none
+
+  #nav
+    grid-area: nav
+
+  & > *
+    display: flex
+    align-items: center
+
+  h1
+    margin: 0
+    height: $logo-size
+    font-weight: normal
+
+    svg
+      grid-area: logo
+      height: $logo-size
+      fill: $color-font-header
+      max-width: 100%
+
+    span:first-of-type
+      grid-area: line1
+
+    span:last-of-type
+      grid-area: line2
+
+  nav
+    display: flex
+
+    ul
+      @include not-a-list
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      @media (max-width: $bkpt-medium - 1px)
+        overflow: hidden
+        max-height: 0
+        opacity: 0
+        transition: max-height $time-base, opacity $time-base
+        margin-bottom: 4vh
+
+        li:not(:last-child)
+          margin-bottom: .5em
+
+      @media (min-width: $bkpt-medium)
+        flex-direction: row
+
+        li.optional
+          display: none
+
+    &.open ul
+      max-height: 2000px
+      opacity: 1
+
+    a
+      display: block
+      color: inherit
+      font-weight: 400
+      transition-duration: $time-base
+      transition-property: background-color
+
+      background-color: $color-darker-red
+      padding: 1em
+
+      &:hover, &:focus
+        background-color: $color-lighter
+        color: $color-font-black
+
+      @media (min-width: $bkpt-medium)
+        padding: 0 0 .5em 0
+        border-bottom: 2px solid transparent
+        background-color: transparent
+        transition-property: border-color
+
+        &:hover, &:focus
+          border-color: rgba($color-lighter,.2)
+          background-color: transparent
+          color: inherit
+
+
+/* Content Header */
+#content-header
+  $h2-foot-size: 1.2em
+  $h2-margin-bottom: 4vh
+
+  color: $color-lighter
+  min-height: calc(100vh - #{$header-height})
+  display: flex
+  align-items: center
+
+  a
+    color: inherit
+
+  & > div
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-areas: 'notification' 'introduction' 'hours' 'links'
+    padding-bottom: 10vh
+    box-sizing: border-box
+    margin-top: 1em
+
+    @media (min-width: $bkpt-medium)
+      grid-template-columns: auto auto
+      grid-template-areas: 'notification notification' 'introduction introduction' 'hours links'
+      grid-gap: 5vh
+
+    @media (min-width: $bkpt-large)
+      grid-template-columns: 3fr 2fr
+      grid-template-areas: 'notification notification' 'introduction hours' 'links hours'
+
+    #introduction
+      grid-area: introduction
+
+      h2
+        font-size: $h2-foot-size
+        color: $color-secondary
+        padding-bottom: 0
+        margin-bottom: $h2-margin-bottom
+
+      em
+        font-style: normal
+        font-weight: 700
+
+      p
+        line-height: 1.3
+        font-weight: bold
+        margin: 0 0 5vh
+        font-size: 1.5em
+        transition: font-size $time-base
+
+        @media (min-width: $bkpt-small)
+          font-size: 2.1em
+
+    ul
+      grid-area: links
+      $square-size: 160px
+      @include not-a-list
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+
+      li
+        flex-grow: 1
+
+        @media (min-width: $bkpt-large)
+          flex-grow: 0
+
+        &:not(:last-child)
+          margin-bottom: 1rem
+
+          @media (min-width: $bkpt-large)
+            margin-bottom: 0
+
+        a
+          $tile-padding: 1.2rem
+          height: 100%
+          display: block
+          box-sizing: border-box
+          background-color: $color-darker-red
+          padding: $tile-padding
+          position: relative
+          transition: color $time-base*2, background-color $time-base*2
+          font-size: 1em
+
+          @media (min-width: $bkpt-large)
+            height: $square-size
+
+          svg
+            fill: rgba($color-lighter,.8)
+            height: 30px
+            position: absolute
+            bottom: $tile-padding
+            right: $tile-padding
+            transform: rotate(90deg)
+
+      li:not(#facebook) a
+        &:hover, &:focus
+          background-color: $color-lighter
+          color: $color-font-black
+
+          svg
+            fill: $color-font-black
+
+      li#facebook a
+        border: 1px solid rgba($color-lighter,.4)
+        background-color: transparent
+        transition: border $time-base
+
+        svg
+          transform: rotate(-45deg)
+          transition: fill $time-base
+
+        &:hover, &:focus
+          border-color: rgba($color-lighter,.3)
+
+          svg
+            fill: $color-lighter
+
+
+      @media (min-width: $bkpt-large)
+        flex-direction: row
+
+        li:not(:last-child)
+          margin-right: 5%
+
+        a
+          width: $square-size
+
+    #horaires
+      grid-area: hours
+      background-color: rgba(lighten($color-main-red,10%),.4)
+      padding: 2rem 1.2rem
+      flex: 1
+      margin-bottom: 5vh
+
+
+      // Animation
+      @keyframes targeting
+        0%
+          background-color: rgba(lighten($color-main-red,10%),1)
+        60%
+          background-color: rgba(lighten($color-main-red,10%),.8)
+        100%
+          background-color: rgba(lighten($color-main-red,10%),.4)
+
+      &:target
+          animation: targeting 1.5s ease-in
+
+
+      @media (min-width: $bkpt-medium)
+        margin-bottom: 0
+        padding: 2em
+
+      @media (min-width: $bkpt-large)
+        margin-top: calc(#{$h2-foot-size} + #{$h2-margin-bottom})
+
+      h1
+        font-size: 1.5em
+
+      h2
+        margin-top: 2em
+        margin-bottom: .5em
+        font-size: 1.2em
+
+      table
+        // Accessibility only
+        thead
+          display: none
+
+        // Hours column
+        td:first-child
+          white-space: nowrap
+
+        tr td:first-child
+          padding: 0 2em 0 0
+          text-align: left
+
+    #notification
+      grid-area: notification
+      background-color: rgba($color-darker-red,.5)
+      padding: 1.5em
+      margin-bottom: 1em
+      display: flex
+      flex-direction: row
+      transition: margin $time-base
+
+      @media (min-height: 800px)
+        margin-bottom: 2em
+
+      div
+        display: flex
+        align-items: center
+
+      p
+        margin: 0
+
+      a
+        text-decoration: underline
+
+      svg
+        fill: rgba(#fff,.5)
+        height: 1.5em
+        margin-right: 1em

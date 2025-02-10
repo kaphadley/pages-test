@@ -1,0 +1,125 @@
+$info-width: 740px
+$background: rgba(255,255,255,.8)
+
+#informations-pratiques
+  display: block
+
+  & > div
+    max-width: $content-width
+
+  #cours-essai
+    width: $info-width
+    max-width: 100%
+    margin: 10vh auto 8vh
+    background-color: $background
+    box-sizing: border-box
+    @include content-tile
+
+    @media (min-width: $bkpt-large)
+      margin-left: 0
+
+    h1
+      text-align: left
+      font-size: 1.8em
+      margin-bottom: 1em
+    p
+      font-size: 1.1em
+      font-weight: 400
+      color: $color-font-light
+
+    & > *:last-child
+      margin-bottom: 0
+
+  dt
+    font-size: .9em
+    opacity: .7
+    text-transform: uppercase
+
+  dd
+    margin: 0
+
+
+#foldables
+  display: flex
+  justify-content: center
+
+  @media (min-width: $bkpt-large)
+    justify-content: flex-end
+
+  & > div
+    display: flex
+    flex-direction: column
+    width: 100%
+
+    @media (min-width: $bkpt-medium)
+      width: $info-width
+
+  .foldable
+    background-color: $background
+    box-sizing: border-box
+    @include content-tile
+
+    &:not(:last-child)
+      margin-bottom: $content-padding-relative
+
+      @media (min-width: $bkpt-medium)
+        margin-bottom: $content-padding-relative / 2
+
+    h2
+      position: relative
+      margin: 0
+
+    p,
+    dd,
+    td,
+      color: $color-font-light
+
+    & > div
+
+      & > *:first-child
+        padding-top: $content-padding-relative
+        margin-top: 0
+
+      & > *:last-child
+        margin-bottom: 0
+
+      // Tables h-scroll
+      & > div
+        overflow-x: scroll
+
+    svg
+      $height: 40px
+      height: $height
+      position: absolute
+      transition: transform $time-base
+      right: calc(-1*(#{$body-padding} / 2))
+      bottom: calc(-1*(#{$content-padding-relative} - 4px))
+
+      @media (min-width: $bkpt-small)
+        bottom: calc(-1*(#{$content-padding-relative} * 2/3))
+
+      @media (min-width: $bkpt-medium)
+        right: calc(-1*(#{$content-padding-relative} - 7px))
+        top: -4px
+
+    &.open
+      svg
+        transform: rotate(180deg)
+
+      & > div
+        max-height: 10000px
+
+  // If JS
+  &.js > div
+
+    h2
+      cursor: pointer
+
+    svg
+      display: block
+
+    & > div > div
+      max-height: 0
+      overflow: hidden
+      transition: max-height $time-base
+
