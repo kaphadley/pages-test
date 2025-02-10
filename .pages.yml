@@ -1,1 +1,8 @@
 media: docs/files
+
+content:
+  - name: presentation
+    label: Présentation
+    type: ?
+    path: docs/_includes
+    filename: "presentation.md"
