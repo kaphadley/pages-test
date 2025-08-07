@@ -15,6 +15,7 @@ content:
       - name: image
         type: string
         hidden: true
+        default: default.jpg
       - name: title
         label: Title
         type: string
