@@ -1,5 +1,6 @@
 ---
 title: Edition du titre
+image: test.jpg
 ---
 Le Võ est **ouvert** à tout le monde, quel que soit votre sexe, âge ou forme physique. Le cours d’essai est totalement gratuit et sans engagement.
 
