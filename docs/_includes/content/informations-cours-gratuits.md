@@ -1,6 +1,6 @@
 ---
-title: "Edition du titre: dev version"
-image: test.jpg
+image: default.jpg
+title: 2nd dev edition
 ---
 Le Võ est **ouvert** à tout le monde, quel que soit votre sexe, âge ou forme physique. Le cours d’essai est totalement gratuit et sans engagement.
 
