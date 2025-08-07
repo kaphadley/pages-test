@@ -1,5 +1,9 @@
 media: docs/files
 
+settings:
+    content:
+        merge: true
+
 content:
   - name: presentation
     label: Presentation
