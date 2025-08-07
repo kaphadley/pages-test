@@ -7,3 +7,14 @@ content:
     path: docs/_includes/content/presentation.md
     fields:
       - { name: body, label: Body, type: rich-text }
+  - name: cours
+    label: Cours
+    type: file
+    path: docs/_includes/content/informations-cours-gratuits.md
+    fields:
+      - name: image
+        type: string
+        hidden: true
+      - name: title
+        label: Title
+        type: string
